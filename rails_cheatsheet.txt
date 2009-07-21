@@ -1,0 +1,43 @@
+#### Initialize project -
+
+	rails project_name
+	cd project_name
+
+
+#### Implement Git -
+	
+	# Create a .gitignore file to configure files to be ignored by Git
+	touch .gitignore 
+
+	# Edit the .gitignore file
+	vim .gitignore	
+	# Type "i", add the following lines, press [ESC] key, type ":x" and press [ENTER]
+		.DS_Store
+		db/*.sqlite3
+		doc/api
+		doc/app
+		log/*.log
+		tmp/**/*
+
+	# Include to track empty directories
+	touch tmp/.gitignore
+	touch log/.gitignore
+
+	# Create the repository
+	git init
+
+	# Add all the files (except those ignored) to the next commit
+	git add .
+
+	# Commit the changes
+	git commit -m "initial commit"
+
+
+#### Run Development Server -
+
+	# Start the server
+	script/server
+
+	# Stop the server
+	(CTRL + C)
+
