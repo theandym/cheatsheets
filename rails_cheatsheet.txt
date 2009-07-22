@@ -1,10 +1,10 @@
-#### Initialize project -
+#### Initialize project ####
 
 	rails project_name
 	cd project_name
 
 
-#### Implement Git -
+#### Implement Git ####
 	
 	# Create a .gitignore file to configure files to be ignored by Git
 	touch .gitignore 
@@ -26,18 +26,28 @@
 	# Create the repository
 	git init
 
-	# Add all the files (except those ignored) to the next commit
+	# Add all the files (except those ignored) to the staging area for the next commit
 	git add .
 
 	# Commit the changes
 	git commit -m "initial commit"
+	
 
+	
+	# Additional Git commands/procedures
+	
+	# Add particular files to the staging area for the next commit
+	git add file_name
+	
+	# Determine changes since the last commit
+	git status
+		
 
-#### Run Development Server -
+#### Run Development Server ####
 
 	# Start the server
 	script/server
 
 	# Stop the server
-	(CTRL + C)
+	[CTRL] + [C]
 
