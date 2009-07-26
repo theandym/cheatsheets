@@ -30,7 +30,7 @@
 	git add .
 
 	# Commit the changes
-	git commit -m "initial commit"
+	git commit -m "commit description"
 	
 
 	
