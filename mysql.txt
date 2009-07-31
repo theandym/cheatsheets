@@ -11,7 +11,7 @@
 	mysql -p -u database_admin_user_name
 	
 	CREATE USER 'new_database_user_name'@'localhost' IDENTIFIED BY 'new_database_user_password';
-	CREATE DATABASE new_database_name;
+	CREATE DATABASE `new_database_name`;
 	GRANT ALL PRIVILEGES ON `new_database_name` . * TO 'new_database_user_name'@'localhost';
 	FLUSH PRIVILEGES;
 	exit
