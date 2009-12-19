@@ -32,7 +32,16 @@
 					  price < 0.01
 				end
 		end
-		
 
+
+#### Sessions ####
+
+	# Store session data in database
+	
+	  # Create database migration
+    
+      rake db:sessions:create
+      
+      rake db:migrate
 
 	
