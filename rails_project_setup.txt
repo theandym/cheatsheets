@@ -1,16 +1,17 @@
-#### Initialize project ####
+### Initialize project ###
 
 	rails project_name
 	cd project_name
 
 
-#### Implement Git ####
+### Implement Git ###
 	
 	# Create a .gitignore file to configure files to be ignored by Git
 	touch .gitignore 
 
 	# Edit the .gitignore file
 	vim .gitignore	
+	
 	# Type "i", add the following lines, press [ESC] key, type ":x" and press [ENTER]
 		.DS_Store
 		db/*.sqlite3
@@ -32,18 +33,17 @@
 	# Commit the changes
 	git commit -m "commit description"
 	
-
 	
-	# Additional Git commands/procedures
+	### Additional Git commands/procedures ###
 	
-	# Add particular files to the staging area for the next commit
-	git add file_name
+		# Add particular files to the staging area for the next commit
+		git add file_name
 	
-	# Determine changes since the last commit
-	git status
+		# Determine changes since the last commit
+		git status
 		
 
-#### Run Development Server ####
+### Run Development Server ###
 
 	# Start the server
 	script/server

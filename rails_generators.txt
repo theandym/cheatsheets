@@ -1,63 +1,64 @@
-#### Controllers ####
+### Controllers ###
 
-  # Create controller
-	  
-	  ruby script/generate controller Name action_name
-
-
-#### Models ####
+  	# Create controller
+  	ruby script/generate controller Name action_name
 
 
-#### Views ####
+### Models ###
 
 
-#### Scaffolding ####
-
-	# Create scaffold
-	  
-	  ruby script/generate scaffold name title:string description:text image_url:string
+### Views ###
 
 
-#### Migrations ####
+### Scaffolding ###
 
-  # Create standard migration
-  
+	# Create scaffold 
+	ruby script/generate scaffold name title:string description:text image_url:string
+
+
+### Migrations ###
+
+  	# Create standard migration  
     ruby script/generate migration add_price_to_product price:decimal
+
 
 	# Create data-only migration 
 
-	  # Generate migration
-	    
+		# Generate migration	    
 	    ruby script/generate migration add_test_data
     
-    # In db/migrate/XXXXXXXXXXXXXX_add_test_data.rb add the test data
-    
-      class AddTestData < ActiveRecord::Migration
-        def self.up
-          Product.delete_all
 
-          Product.create(:title => 'Pragmatic Version Control',
-            :description =>
-            %{<p>
-               This book is a recipe-based approach to using Subversion that will 
-               get you up and running quickly---and correctly. All projects need
-               version control: it's a foundational piece of any project's 
-               infrastructure. Yet half of all project teams in the U.S. don't use
-               any version control at all. Many others don't use it well, and end 
-               up experiencing time-consuming problems.
-            </p>},
-          :image_url => '/images/svn.jpg',
-          :price => 28.50)
-        
-          # . . .
+    # In db/migrate/XXXXXXXXXXXXXX_add_test_data.rb add the test data    
+    class AddTestData < ActiveRecord::Migration
+      def self.up
+        Product.delete_all
 
-        end
+        Product.create(:title => 'Pragmatic Version Control',
+          :description =>
+          %{<p>
+             This book is a recipe-based approach to using Subversion that will 
+             get you up and running quickly---and correctly. All projects need
+             version control: it's a foundational piece of any project's 
+             infrastructure. Yet half of all project teams in the U.S. don't use
+             any version control at all. Many others don't use it well, and end 
+             up experiencing time-consuming problems.
+          </p>},
+        :image_url => '/images/svn.jpg',
+        :price => 28.50)
+      
+        # . . .
 
-        def self.down
-          Product.delete_all
-        end
       end
+
+      def self.down
+        Product.delete_all
+      end
+    end
       
-    # Apply migration
-      
-      rake db:migrate
+	# Apply migration      
+	rake db:migrate
+
+
+
+
+

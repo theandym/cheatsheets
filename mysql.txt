@@ -1,29 +1,36 @@
-	### Server Migration: MySQL databases ###
+### Create MySQL User / Database ###
 
-
-	# Dump MySQL database into file
-	mysqldump -p -u database_user_name database_name > output_file_name.sql
-	
-	# SCP to new server
-	scp -P ssh_port_# local_file_location remote_user@domain.com:remote_file_location
-	
-	# Create MySQL user
+	# Login to MySQL
 	mysql -p -u database_admin_user_name
-	
+
+	# Create new user
 	CREATE USER 'new_database_user_name'@'localhost' IDENTIFIED BY 'new_database_user_password';
+	
+	# Create new database
 	CREATE DATABASE `new_database_name`;
+
+	# Assign privilages for new database to user
 	GRANT ALL PRIVILEGES ON `new_database_name` . * TO 'new_database_user_name'@'localhost';
+
+	# End session
 	FLUSH PRIVILEGES;
 	exit
-	
-	
-	# Import MySQL database from file
-	mysql -p -u database_user_name database_name < input_file_name.sql
-	
-	
-	# References:
 
-	### http://www.mydigitallife.info/2007/07/21/how-to-backup-and-restore-export-and-import-mysql-databases-tutorial/
-	### http://crunchbang.org/archives/2008/04/17/create-mysql-user-accounts-from-the-command-line/
-	### http://news.softpedia.com/news/MySQL-Basic-Usage-Guide-37081.shtml
-	### http://tombatron.blogspot.com/2008/02/mysql-command-line-interface-for.html
+
+### Export MySQL database into file ###
+
+	mysqldump -p -u database_user_name database_name > output_file_name.sql
+	
+
+### Import MySQL database from file ###
+
+	mysql -p -u database_user_name database_name < input_file_name.sql
+
+	
+### References ###
+
+	# http://www.mydigitallife.info/2007/07/21/how-to-backup-and-restore-export-and-import-mysql-databases-tutorial/
+	# http://crunchbang.org/archives/2008/04/17/create-mysql-user-accounts-from-the-command-line/
+	# http://news.softpedia.com/news/MySQL-Basic-Usage-Guide-37081.shtml
+	# http://tombatron.blogspot.com/2008/02/mysql-command-line-interface-for.html
+	

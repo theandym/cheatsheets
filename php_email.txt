@@ -1,12 +1,14 @@
-<?php
-$to      = 'andy@sofawarmer.com';
-$subject = 'test email subject';
-$message = 'hello, this is a test email message';
-$headers = 'From: server@sofawarmer.com' . "\r\n" .
-    'Reply-To: server@sofawarmer.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+### Send email from PHP ###
 
-mail($to, $subject, $message, $headers);	
+	<?php
+	$to      = 'andy@sofawarmer.com';
+	$subject = 'test email subject';
+	$message = 'hello, this is a test email message';
+	$headers = 'From: server@sofawarmer.com' . "\r\n" .
+	    'Reply-To: server@sofawarmer.com' . "\r\n" .
+	    'X-Mailer: PHP/' . phpversion();
 
-echo "email sent to " . $to;
-?>
+	mail($to, $subject, $message, $headers);	
+
+	echo "email sent to " . $to;
+	?>

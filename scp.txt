@@ -1,19 +1,28 @@
-The syntax for the scp command is:
-scp [options] [[user@]host1:]filename1 ... [[user@]host2:]filename2
+### The syntax for the scp command is: ###
+	
+	scp [options] [[user@]host1:]filename1 ... [[user@]host2:]filename2
 
-For example, if user dvader is on a computer called empire.gov, and wants to copy a file called file1.txt to a directory called somedir in his account on a computer called deathstar.com, he would enter:
-scp file1.txt dvader@deathstar.com:somedir
+	# For example, if user dvader is on a computer called empire.gov, and wants
+	# to copy a file called file1.txt to a directory called somedir in his 
+	# account on a computer called deathstar.com, he would enter:
+	scp file1.txt dvader@deathstar.com:somedir
 
-Likewise, if he wanted to copy the entire contents of the somedir directory on deathstar.com back to his empire.gov account, he would enter:
-scp -r dvader@deathstar.com:somedir somedir
+	# Likewise, if he wanted to copy the entire contents of the somedir 
+	# directory on deathstar.com back to his empire.gov account, he would 
+	# enter:
+	scp -r dvader@deathstar.com:somedir somedir
 
-Similarly, if he is working on another computer, but wanted to copy a file called file1.txt from his home directory on empire.gov to a directory called somedir in his account on deathstar.com, he would enter:
-scp dvader@empire.gov:file1.txt dvader@deathstar.com:somedir
+	# Similarly, if he is working on another computer, but wanted to copy a 
+	# file called file1.txt from his home directory on empire.gov to a 
+	# directory called somedir in his account on deathstar.com, he would enter:
+	scp dvader@empire.gov:file1.txt dvader@deathstar.com:somedir
 
-When using wildcards (e.g.,  *  and  ? ) to copy multiple files from a remote system, be sure to enclose the filenames in quotes. This is because the Unix shell, not the scp command, expands unquoted wildcards.
+	# When using wildcards (e.g.,  *  and  ? ) to copy multiple files from a 
+	# remote system, be sure to enclose the filenames in quotes. This is 
+	# because the Unix shell, not the scp command, expands unquoted wildcards.
 
 
 
-	# References:
+### References: ###
 
-	### http://kb.iu.edu/data/agye.html
+	# http://kb.iu.edu/data/agye.html

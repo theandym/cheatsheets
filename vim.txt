@@ -1,20 +1,20 @@
 ### Search and Replace ###
 
-
-:%s/foo/bar/g
-    Find each occurrence of 'foo', and replace it with 'bar'. 
-
-:%s/foo/bar/gc
-    Change each 'foo' to 'bar', but ask for confirmation first. 
-
-:%s/\<foo\>/bar/gc
-    Change only whole words exactly matching 'foo' to 'bar'; ask for confirmation. 
-
-:%s/foo/bar/gci
-    Change each 'foo' (case insensitive) to 'bar'; ask for confirmation. 
-
-:%s/foo/bar/gcI
-    Change each 'foo' (case sensitive) to 'bar'; ask for confirmation. 
+	# Find each occurrence of 'foo', and replace it with 'bar'.
+	:%s/foo/bar/g
+     
+	# Change each 'foo' to 'bar', but ask for confirmation first.
+	:%s/foo/bar/gc
+     
+	# Change only whole words exactly matching 'foo' to 'bar'; ask for confirmation. 
+	:%s/\<foo\>/bar/gc
+    
+	# Change each 'foo' (case insensitive) to 'bar'; ask for confirmation.
+	:%s/foo/bar/gci
+     
+	# Change each 'foo' (case sensitive) to 'bar'; ask for confirmation. 
+	:%s/foo/bar/gcI
+    
 
 
 
