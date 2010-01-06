@@ -1,0 +1,7 @@
+### Create New User ###
+
+	# Create new user with a home directory and a primary group
+	sudo useradd -d /home/username -m -g primarygroup username
+
+	# Add a password to newly created user
+	sudo passwd username
