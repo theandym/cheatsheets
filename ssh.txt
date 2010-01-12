@@ -1,0 +1,4 @@
+### Edit SSH Key Password ###
+
+	# Substitute 'id_rsa' for the name of the key
+	ssh-keygen -f id_rsa -p
